@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 
     },
     date: {
-
+        fontFamily: 'F1-Regular',
     },
     month: {
         backgroundColor: 'gainsboro',
@@ -61,16 +61,19 @@ const styles = StyleSheet.create({
         color: 'dimgray',
         fontWeight: 'bold',
         marginTop: 5,
+        fontFamily: 'F1-Bold',
 
     },
-    round: { color: Colors.primary },
+    round: { color: Colors.primary, fontFamily: 'F1-Regular' },
     description: {
         color: 'dimgray'
     },
     country: {
 
-        fontWeight: 'bold',
+
         fontSize: 20,
+        fontFamily: 'F1-Bold',
+        marginVertical: 7,
     },
     datesContainer: {
         padding: 10,
