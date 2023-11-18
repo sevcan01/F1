@@ -11,7 +11,7 @@ const races = racesResponse.data.races.response
 
 export default function RaceListItem({ item, round }) {
     return (
-        <Link href={'/race'} asChild>
+        <Link href={`/race/${item.id}`} asChild>
             <Pressable style={styles.itemContainer}>
                 <View style={styles.datesContainer}>
 
