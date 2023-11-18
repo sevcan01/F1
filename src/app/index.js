@@ -21,7 +21,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Link href={'/About'}>Go to about</Link>
+
       <StatusBar
         animated={true}
         backgroundColor="#fff"
