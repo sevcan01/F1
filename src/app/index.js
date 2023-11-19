@@ -5,7 +5,8 @@ import racesResponse from '../../assets/data/races.json';
 
 import dayjs from 'dayjs';
 import RaceListItem from '../components/RaceListItem';
-import { Link } from 'expo-router';
+import { Stack } from 'expo-router';
+
 
 
 
@@ -21,7 +22,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-
+      <Stack.Screen options={{ title: 'Racing 123' }} />
       <StatusBar
         animated={true}
         backgroundColor="#fff"
