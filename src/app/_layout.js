@@ -1,7 +1,7 @@
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { ActivityIndicator, SafeAreaView, Text } from "react-native";
-
+import { StatusBar } from 'expo-status-bar';
 import { Colors } from '../Contants/Colors';
 
 export default function RootLayouy() {
@@ -18,8 +18,21 @@ export default function RootLayouy() {
     if (!fontsLoaded) {
         return <ActivityIndicator />
     }
-    return <Stack screenOptions={{ headerStyle: { backgroundColor: Colors.primary }, headerTitleStyle: { color: 'whitesmoke', fontFamily: 'F1-Bold' }, headerTintColor: 'white' }} >
+    return (
+        <>
+            <Stack screenOptions={{ headerStyle: { backgroundColor: Colors.primary }, headerTitleStyle: { color: 'whitesmoke', fontFamily: 'F1-Bold' }, headerTintColor: 'white' }} >
 
-        <Stack.Screen name="index" options={{ title: 'Racing' }} />
-    </Stack>
+                <Stack.Screen name="index" options={{ title: 'Racing' }} />
+            </Stack>
+            <StatusBar
+                animated={true}
+                backgroundColor="#fff"
+                style="light"
+
+
+
+            />
+        </>
+
+    )
 }

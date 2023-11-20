@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { FlatList, StyleSheet, View } from 'react-native';
 import racesResponse from '../../assets/data/races.json';
 
@@ -23,13 +23,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ title: 'Racing 123' }} />
-      <StatusBar
-        animated={true}
-        backgroundColor="#fff"
 
-
-
-      />
       <FlatList
         data={sortedRaces}
 
