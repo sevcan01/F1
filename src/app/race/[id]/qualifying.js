@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 import React from 'react'
+import raceRankingResponse from '../../../../assets/data/race-rankings.json'
+import RankingListItem from '../../../components/RankingListItem'
 
-const QualifyingResults = () => {
+const raceRankings = raceRankingResponse.data.raceRankings.response
+const QualifyingScreen = () => {
     return (
-        <View>
-            <Text>QualifyingResults</Text>
-        </View>
+        <FlatList
+            data={raceRankings}
+            renderItem={({ item }) => <RankingListItem item={item} />}
+        />
     )
 }
 
-export default QualifyingResults
+export default QualifyingScreen
 
-const styles = StyleSheet.create({})
+// const styles = StyleSheet.create({})
