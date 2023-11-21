@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import { ActivityIndicator, SafeAreaView, Text } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { Colors } from '../Contants/Colors';
+import ApolloClientProvider from "../providers/ApolloClientProvider";
 
 export default function RootLayouy() {
     console.log('Layout');
@@ -19,7 +20,7 @@ export default function RootLayouy() {
         return <ActivityIndicator />
     }
     return (
-        <>
+        <ApolloClientProvider>
             <Stack screenOptions={{ headerStyle: { backgroundColor: Colors.primary }, headerTitleStyle: { color: 'whitesmoke', fontFamily: 'F1-Bold' }, headerTintColor: 'white' }} >
 
                 <Stack.Screen name="index" options={{ title: 'Racing' }} />
@@ -32,7 +33,7 @@ export default function RootLayouy() {
 
 
             />
-        </>
+        </ApolloClientProvider>
 
     )
 }
